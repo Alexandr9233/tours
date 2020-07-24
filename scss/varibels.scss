@@ -1,0 +1,23 @@
+$color-white: #FFFFFF;
+$color-blue: #006DFE;
+
+@mixin right {
+    background: url("../img/svg/right.svg") no-repeat 95% center;
+    transition: all .2s;
+}
+
+@mixin hoverRight {
+    background: url("../img/svg/right.svg") no-repeat right 0 center;
+}
+
+@mixin title {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+}
+
+@mixin more {
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-blue;
+}
