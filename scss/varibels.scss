@@ -16,8 +16,28 @@ $color-blue: #006DFE;
     line-height: 42px;
 }
 
+@mixin titleAfter {
+    &::after {
+        content: "";
+        position: absolute;
+        width: 253px;
+        height: 3px;
+        background-color: $color-blue;
+        bottom: 0;
+        left: 0;
+    }
+}
+
 @mixin more {
     font-size: 16px;
     line-height: 24px;
     color: $color-blue;
+}
+
+@mixin like {
+    background: url("../img/svg/like.svg") no-repeat right center;
+}
+
+@mixin commit {
+    background: url("../img/svg/commit.svg") no-repeat right center;
 }

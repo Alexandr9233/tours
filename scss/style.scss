@@ -44,6 +44,13 @@ img {
     top: 0;
     left: 0;
     width: 100%;
+    transition: .2s linear;
+    padding-bottom: 20px;
+    z-index: 999;
+}
+
+.header__active {
+    background-color: #0E1D28;
 }
 
 .header__wrapper {
@@ -251,15 +258,7 @@ img {
     position: relative;
     padding-bottom: 10px;
 
-    &::after {
-        content: "";
-        position: absolute;
-        width: 253px;
-        height: 3px;
-        background-color: $color-blue;
-        bottom: 0;
-        left: 0;
-    }
+    @include titleAfter;
 }
 
 .places__caption {
@@ -385,6 +384,10 @@ img {
     margin-bottom: 85px;
 }
 
+.tour__info {
+    padding-left: 40px;
+}
+
 .tour__desc {
     font-size: 16px;
     line-height: 24px;
@@ -405,3 +408,168 @@ img {
 }
 
 // Tours end
+
+// Top places start
+
+.top__places {
+    margin-bottom: 144px;
+}
+
+.top__places-card {
+    display: flex;
+    flex-direction: column;
+    max-height: 567px;
+}
+
+.top__places-title {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 54px;
+
+    @include title;
+    @include titleAfter;
+}
+
+.top__places-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 57px;
+}
+
+.top__places-card-pic {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.top__places-card-thumb {
+    width: 100%;
+    overflow: hidden;
+}
+
+.top__places-stats {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: $color-white;
+    width: 100%;
+    position: absolute;
+    background: rgba(21, 24, 36, 0.6);
+    bottom: 0;
+    left: 0;
+    padding: 15px 15px 15px 25px;
+    transform: translateY(-5%);
+}
+
+.top__places-card-title {
+    margin: 0px auto 0px 0px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: $color-white;
+}
+
+.top__places-likes-value {
+    padding-right: 20px;
+    margin-right: 15px;
+
+    @include like;
+}
+
+.top__places-commit {
+    padding-right: 20px;
+    margin-right: 15px;
+
+    @include commit;
+}
+
+.top__places-desc {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px;
+    overflow: auto;
+}
+
+.top__places-more {
+    text-decoration: none;
+}
+
+.see__more {
+    padding: 12px 20px;
+    color: $color-white;
+    background-color: $color-blue;
+    transition: all .2s;
+
+    &:hover {
+        background-color: #12488f;
+    }
+}
+
+// Top places end
+
+// Video start
+
+.video {
+    width: 100%;
+}
+
+.video__wrapper {
+    position: relative;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.video__ittem {
+    padding-top: 9 / 16 * 100%;
+}
+
+.video__element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+// Video end
+
+// Footer start
+
+.footer {
+    background-color: #0E1D28;
+    padding: 119px 0;
+}
+
+.footer__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    .footer__logo {
+        margin: 0 auto 0 0;
+    }
+
+    .footer__nav {
+        margin-right: 140px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+.footer__menu-item {
+    color: $color-white;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.footer__menu-link {
+    color: $color-white;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+// Footer end
