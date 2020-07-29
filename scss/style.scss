@@ -30,14 +30,16 @@ img {
 .wrapper {
     max-width: 1060px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .wrapper-full {
     max-width: 1262px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
-// Styles for header start
+// Styles for oier start
 
 .header {
     position: fixed;
@@ -58,7 +60,6 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-end;
     padding-top: 56px;
 }
 
@@ -88,6 +89,23 @@ img {
         opacity: .75;
         outline: none;
     }
+}
+
+.header__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 28px;
+    padding: 1px;
+}
+
+.burger__line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $color-white;
+    left: 0;
 }
 
 // Styles for header end
@@ -574,3 +592,5 @@ img {
 }
 
 // Footer end
+
+@import "./media.scss";
